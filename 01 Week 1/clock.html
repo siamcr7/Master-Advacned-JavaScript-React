@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>React Hello World</title>
+</head>
+
+<body>
+<div id="root">
+    <!-- This div's content will be managed by React. -->
+</div>
+<script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
+<script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+<script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+
+<script type = "text/babel">
+
+    function tickTok(){
+        const element = (
+            <div>
+                <h1>YOLLOLO</h1>
+                <h2> TIME IS NOW, TIME IS MINE </h2>
+                <h3> {new Date().toLocaleTimeString()} </h3>
+            </div>
+        );
+
+        ReactDOM.render(
+            element,
+            document.getElementById('root')
+        );
+    }
+
+    console.log(new Date().toLocaleTimeString());
+
+    tickTok();
+
+    setInterval(tickTok,1000);
+
+</script>
+
+</body>
+</html>
